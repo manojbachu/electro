@@ -1,0 +1,76 @@
+.navBAR1{
+    padding: 0px 40px;
+   
+}
+
+.email li{
+margin-top: 0.5em;
+}
+.meNU{
+position: relative;
+top:7px;
+
+}
+.megaMENU {
+    padding: 3em;
+    border :none;
+    box-shadow :0 3px 6px black;
+}                     
+.megaMENU ul{
+list-style :none;
+padding :0;
+}
+
+.megaMENU li a{
+font-size: 0.8em;
+padding: 0.5em 1em;
+}  
+
+.sideBAR{
+
+max-height: 80vh;
+overflow-y: scroll;
+}   
+a{
+    color:black;
+    text-decoration: none;
+  } 
+@media screen and (min-width:450px) {
+    .megaMENU.show{
+        display :flex;
+    }
+   .dropdown:hover .megaMENU{
+    display: flex;
+   }
+   .anchor:hover{
+    color:red;
+    
+    border-radius: 3px;
+   }
+}
+@media screen and (max-width:450px){
+    .megaMENU.show{
+        max-height: 60vh;
+        overflow-y: scroll;
+    }
+    
+}
+@media screen and (max-width:426px){
+    .email{
+        font-size: 1.3em;
+    }
+}
+.card:hover{
+    border:2px solid yellowgreen;
+    border:border-box
+  }
+  @media screen and (min-width: 424px) and (max-width:768px){
+    .slider-caRD{
+        max-height: 180vh;
+        overflow-y: scroll;
+    }
+
+   }
+   .sliDER{
+             padding:0px 50px;
+   }

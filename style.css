@@ -1,0 +1,225 @@
+
+.navBAR1{
+           padding: 0px 40px;
+          
+}
+
+.email li{
+    margin-top: 0.5em;
+}
+.meNU{
+    position: relative;
+    top:7px;
+    
+}
+.caRD{
+    padding : 1.5em;
+    margin : 0em 1em;
+    transition : all 0.4s; 
+   
+}
+
+
+.card-title{
+    color:rgba(0, 0, 255, 0.856);
+    text-align:center;
+    font-weight : normal;
+
+}
+.card-text{
+    font-weight : bold;
+
+}
+a{
+  color:black;
+  text-decoration: none;
+}
+
+                       /*navbar dropdown*/
+ .megaMENU {
+                    padding: 3em;
+                    border :none;
+                    box-shadow :0 3px 6px black;
+ }                     
+.megaMENU ul{
+         list-style :none;
+         padding :0;
+}
+
+.megaMENU li a{
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+}  
+
+.sideBAR{
+   
+    max-height: 80vh;
+    overflow-y: scroll;
+}    
+    
+
+                /*timer carousel*/
+.timerCAROUSEL{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border: 0.1em solid black;border-radius: 0.5em; 
+}
+.demo{
+    font-size: 1.2em;
+     background-color: orange;
+}
+
+
+
+@media screen and (min-width:450px) {
+    .megaMENU.show{
+        display :flex;
+    }
+   .dropdown:hover .megaMENU{
+    display: flex;
+   }
+   .anchor:hover{
+    color:red;
+    
+    border-radius: 3px;
+   }
+
+} 
+@media screen and (min-width:426px) {
+    .caRD:hover{
+         transform : scale(1.1); 
+    }
+    .timerIMAGE{
+        height:58vh;
+    }
+    .timerTEXTADJUST{
+        margin-top:4em;
+         margin-left: 2em;
+    }
+    .stiCKY{ 
+        position: sticky;
+        top: 0px;
+        z-index: +10;
+      
+
+    }
+} 
+@media screen and (max-width:450px){
+    .megaMENU.show{
+        max-height: 60vh;
+        overflow-y: scroll;
+    }
+    
+}
+@media screen and (max-width:426px){
+    .email{
+        font-size: 1.3em;
+    }
+    .timerTEXTADJUST{
+        margin-top:2em;
+         margin-left: 2em;
+    }
+    .timerIMAGE{
+        width: 18em;
+        
+    }
+}
+.BUtton:hover{
+    color:blue;
+    border:2px solid blue;
+    background-color: white;
+    text-transform:uppercase;
+}
+                           /*CSS of image-sliders*/
+
+
+                           .slider-cards:hover{
+                            border:2px solid yellowgreen;
+                            border:border-box
+                          }
+                          @media screen and (min-width: 426px) and (max-width:768px){
+                            .slider-caRD{
+                                max-height: 100vh;
+                                overflow-y: scroll;
+                            }
+                        
+                           }
+                           .sliDER{
+                                     padding:0px 50px;
+                           }
+                       /* end */
+
+
+
+                       /* CSS on card-links */
+
+                       .CARD-OFFERS{
+                        color:blue;
+                        text-decoration: none;
+                        font-size:0.7em ;
+                    }
+                    /* CSS of tv-imagelink */
+
+.box{
+    height:20vh;
+    width:100vw;
+   }
+   .TV-text{
+              font-size: 1rem;
+              font-family:Georgia, 'Times New Roman', Times, serif;
+   }
+   .foNT{
+        font-size: 0.8em;
+   }
+   .img-ADJUST{
+   margin-top: -45px;
+   margin-bottom: -55px;
+   
+   }
+                               /* end */
+
+.cart-container{
+    border: 1px solid gray;
+    width: 95vw;
+    list-style-type: none;
+    padding: 15px;
+}
+
+.cart-img{
+    width: 200px;
+}
+
+@media (max-width: 560px) {
+    .cart-img{
+        width: 100px;
+    }
+}
+.search-product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: auto;
+}
+
+table {
+    border-spacing: 0 15px;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+  }
