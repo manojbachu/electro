@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="display.js"></script>
+    <script src="search.js"></script>
+  </head>
+<body>
+  
+  
+  <!--Login Form-------------------------------------->
+  <div class="login-form-container" id="loginForm">
+  <div class="container">
+    <div class="heading">Sign In</div>
+    <div  class="form" id="formEl">
+      <input  class="input"  id="email" placeholder="E-mail or username">
+      <input  class="input" type="password"  id="password" placeholder="Password">
+      <button class="login-button" onclick="onsignIn()" id="loginBtn">Login</button>
+    </div>
+  </div>
+</div>
+
+<div id="appContainer" >
+  <!----header------------------------------>
+    <div class="navbar  navbar-expand-lg  bg-light d-flex justify-content-around  navBAR1 stiCKY ">
+        <a onclick="onHome()" class="navbar-brand  col-md-6 col-lg-3   "><img src="logo.png" alt=""></a>
+        
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+         <div class="navbar-collapse collapse col-md-6 col-lg-3" id="menu">
+            <ul class="navbar-nav align-items-center ">
+                
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle anchor" href="#" data-bs-toggle="dropdown">Laptops & computers</a>
+                  <div class="dropdown-menu megaMENU">
+                      <ul><li><a class="dropdown-item mb-2 " href="#"><strong>Computers</strong></a></li>
+                        <li><a class="dropdown-item" onclick="onTv()">TV</a></li>
+                        <li><a class="dropdown-item" onclick="onLaptop()">Laptops</a></li>
+                        <li><a class="dropdown-item" onclick="onPendrives()">Pendrives</a></li>
+                        <li><a class="dropdown-item" onclick="onHardrives()">Hard Drives </a></li>
+                        </ul>
+                      <ul>
+                        <li><a class="dropdown-item mb-2" href="#"><strong>Cameras</strong></a></li>
+                        <li><a class="dropdown-item" onclick="onCameras()">Cameras</a></li>
+                        <li><a class="dropdown-item" onclick="onlens()">Lences</a></li>
+                        <li><a class="dropdown-item" onclick="onCameraAccessries()">Camera Accessories</a></li>
+                        </ul>
+                      
+                      <ul><li><a class="dropdown-item mb-2" href="#"><strong>Photography</strong></a></li>
+                        <li><a class="dropdown-item" onclick="onSmartphones()">Smart Phones</a></li>
+                        <li><a class="dropdown-item" onclick="onGames()">Video Games </a></li>
+                        <li><a class="dropdown-item" onclick="onTablets()">Tablets</a></li>
+                      </ul>
+                  </div>
+                </li>
+                
+                 <li class="nav-item"><a class="nav-link anchor" href="#">Blogs</a></li>
+                 <li class="nav-item"><a class="nav-link anchor" onclick="onAboutUs()">About Us</a></li>
+                </ul>
+        </div>
+        <div>
+            <ul class="navbar-nav col-md-12 col-lg-3 email mr-auto  " style="margin-left:auto; display: flex; flex-direction: column;   align-items: flex-end; ">
+              
+              <li style="display: flex; flex-direction: row-reverse; justify-content:center;  align-items: center; "><img style="height: 30px;" src="profileImg.png" alt="profile"/>
+              <p id="userDetails" style="margin-top: 10px; margin-right:10px;"></p></li>
+              <button class="btn btn-primary" style="font-size: 12px;" onclick="onLogout()">Logout</button>
+            </ul>
+        </div>
+    </div>
+                                 <!--navbar2-->
+        <nav class="navbar ">
+          <div class="  container-fluid row   bg-warning" > 
+            <div class=" col-lg-3 col-md-6">
+                <ul class="list-inline meNU" >
+                  <li class="list-inline-item">
+                    <div class="dropdown">
+                    <button class="btn btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                          </svg>
+                    </button>
+                    <ul class="dropdown-menu sideBAR">
+                      <li><a class="dropdown-item" onclick="onLaptop()">Laptops & Computers</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="onSmartphones()">Smartphones</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="onCameras()">Cameras</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="onGames()">Video Games & Consoles</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="onPendrives()">Pendrives</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="onHardrives()">Hard Drives</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="onlens()">Lences</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      </ul>
+                  </div>
+                <li class="list-inline-item">Categories</li>
+            </ul>
+            </div>
+           <div class=" col-lg-6 col-md-4">
+            <div class="d-flex " role="search" id="searchForm" >
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button onclick="onSearch()" class="btn btn-outline-success" type="submit">Search</button>
+            </div>
+          </div>
+                  <div class=" col-lg-3 col-md-2  d-flex justify-content-end">
+                    <a onclick="onCart()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M12.5 17h-6.5v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /><path d="M16 19h6" /></svg>
+                  </div>
+          </div>
+       </nav>
+
+                 <!--homepage1-->
+          <div id="subContainer">
+              <div id="home">
+                <div id="carouselExampleDark" class="container-fluid carousel carousel-dark slide mb-3">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <a onclick="onWatches()"> <img src="image1.jpg" class="d-block w-100 " alt="..."></a>
+                      <div class="carousel-caption d-none d-md-block mb-5 ">
+                        <h2>THE NEW <BR>STANDARD</h2>
+                          <small > FAVORABLE SMARTWATCHER</small>
+                          <h1><span class="lead">UPTO</span>40% OFF </h1>
+                          <button class="btn btn-warning"><a onclick="onWatches()">START BUYING</a></button>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <a onclick="onSmartphones()"><img src="homeslide2.jpg" class="d-block w-100" alt="..."></a>
+                      <div class="carousel-caption d-none d-md-block mb-5 ">
+                        <h2>THE TIMEPICERS THAT  <BR>MAKE A STATEMENT</h2>
+                          <h1><span class="lead">UPTO</span>40% OFF </h1>
+                          <button class="btn btn-warning"><a onclick="onSmartphones()">START BUYING</a></button>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <a onclick="onSpeakers()"><img src="homslide3.jpg" class="d-block w-100" alt="..."></a>
+                      <div class="carousel-caption d-none d-md-block mb-5">
+                        <h2>Shop To Get  <BR>What You Love</h2>
+                          <h1><span class="lead">UPTO</span>40% OFF </h1>
+                          <button class="btn btn-warning"> <a onclick="onSpeakers()">START BUYING</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                 </div>    
+                                 
+                     <!--- carousel with 3 cards-->            
+
+                     
+                     <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="false">
+                       <div class="carousel-indicators">
+                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                       </div>
+                       <div class="carousel-inner">
+                         <div class="carousel-item active">
+                          <div class="card-group">
+                           <div class="card caRD">
+                            <h5 class="card-title small">Tablet White EliteBook<br>Revolve 810 G2</h5></a>
+                            <a onclick="onCardLink1()"><img src="card1.jpg" class="card-img-top  " alt="..."></a>
+                            <div class="card-body">
+                             <ul class="d-flex justify-content-between list-unstyled">
+                              <li><p class="card-text">Rs. 1,3000.00</p></li>
+                              <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 "  viewBox="0 0 16 16">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                              </svg></li>
+                             </ul>
+                            
+                            
+                         </div>
+                       </div>
+                       <div class="card caRD">                          
+                         <h5 class="card-title small">Smart Camera 6200U<br>with 500GB SDcard</h5>
+                         <a onclick="onCardLink2()"><img src="card2.jpg" class="card-img-top " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 2,9990.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="card caRD">
+                        <h5 class="card-title small">SmartWatch 2.0 LTE <br> Wifi Waterproof</h5>
+                        <a onclick="onCardLink3()"><img src="card3.jpg" class="card-img-top  " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 7290.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                     
+                         </div>
+                         <div class="carousel-item">
+                     <div class="card-group">
+                       <div class="card caRD">
+                        <h5 class="card-title small">Wireless Audio <br> System Multiroom</h5>
+                        <a onclick="onCardLink4()"><img src="card4.jpg" class="card-img-top  " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 2,9990.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="card caRD">
+                        <h5 class="card-title small">Camera C430W 4K <br> Waterproof</h5>
+                        <a onclick="onCardLink5()"><img src="card5.jpg" class="card-img-top  " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 5900.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="card caRD">
+                        <h5 class="card-title small">Aerocool EN52377 <br> Dead Silence</h5>
+                        <a onclick="onCardLink6()"><img src="card6.jpg" class="card-img-top " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 1500.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                     
+                         </div>
+                         <div class="carousel-item">
+                       
+                     
+                     <div class="card-group">
+                       <div class="card caRD">
+                        <h5 class="card-title small">Gun Metal<br>USB 256GB</h5>
+                        <a onclick="onCardLink7()"><img src="card7.jpg" class="card-img-top  " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 906.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="card caRD" >
+                        <h5 class="card-title small">Gameconsole Destiny Special Edition</h5>
+                        <a onclick="onCardLink8()"><img src="card_8.jpg" class="card-img-top  " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 7890.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="card caRD">
+                        <h5 class="card-title small">Laptop White <br>EliteBook</h5>
+                        <a onclick="onCardLink9()"><img src="card9.jpg" class="card-img-top  " alt="..."></a>
+                         <div class="card-body">
+                          <ul class="d-flex justify-content-between list-unstyled">
+                            <li><p class="card-text">Rs. 13000.00</p></li>
+                            <li class="btn text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg></li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                         </div>
+                       </div>
+                       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="visually-hidden">Previous</span>
+                       </button>
+                       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span class="visually-hidden">Next</span>
+                       </button>
+                     </div>  
+                     
+                      <!--image in middle-->
+                         <div class="row">
+                          <div class=" d-flex justify-content-around">
+                              <a onclick="onTv()"><img src="banner_03.jpg" class="img-thumbnail" ></a>
+                          </div>
+                         </div>
+                         
+                         
+
+
+                     <!--TIMER CAROUSEL-->
+                     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+                      <div class="carousel-inner" ;>
+                        <div class="carousel-item active ">
+                          <div class=" container d-flex justify-content-center timerCAROUSEL"  >
+                          <div class="row  " style="padding:0.5em;">
+                            <div class="col-sm ">
+                              <p class="h4 text-danger">Special Offer</p>
+                            <img src="wirelesssound.jpg" class="img-thumbnail timerIMAGE" >
+              
+                            </div>
+                           <div  class="col-sm timerTEXTADJUST">
+                            <p class="h4 text-primary mb-2">Wireless speaker Waterproof</p><br>
+                            <p><span class="text-danger">29990.00</span><del class="small">39900.00</del></p>
+                            <p> Hurry Up Offer ends in</p>
+                            <span id="demo" class="demo"></span><br><br>
+                            <p class="btn btn-warning BUtton"><a onclick="onCardLink4()">shop now</a></p>
+                           </div>
+                         </div>
+                         </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class=" container d-flex justify-content-around timerCAROUSEL " >
+
+                          <div class="row" style="padding:0.5em;">
+                            <div class="col-sm">
+                              <p class="h4 text-danger">Special Offer</p>
+                            <img src="laptopyoga.jpg" class="img-thumbnail timerIMAGE" >
+              
+                            </div>
+                           <div  class="col-sm timerTEXTADJUST">
+                            <p class="h4 text-primary mb-2">Apple Macbook pro MF841</p><br>
+                            <p><span class="text-danger">13000.00</span><del class="small">15000.00</del></p>
+                            <p> Hurry Up Offer ends in</p>
+                            <span id="demo1" class="demo"></span><br><br>
+                            <p class="btn btn-warning BUtton"><a onclick="onCardLink1()">shop now</a></p>
+                           </div>
+                         </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class=" container d-flex justify-content-around  timerCAROUSEL" >
+
+                          <div class=" row ">
+                            <div class="col-sm">
+                              <p class="h4 text-danger">Special Offer</p>
+                            <img src="camera_4.jpg" class="img-thumbnail timerIMAGE" >
+              
+                            </div>
+                            <div  class="col-sm timerTEXTADJUST">
+                            <p class="h4 text-primary mb-2">Camera C430W 4K Waterproof</p><br>
+                            <p><span class="text-danger">5900.00</span><del class="small">7490.00</del></p>
+                            <p> Hurry Up Offer ends in</p>
+                            <span id="demo2"  class="demo"></span><br><br>
+                            <p class="btn btn-warning BUtton"><a onclick="onCardLink5()">shop now</a></p>
+                           </div>
+                         </div>
+                         </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                    
+              
+                       
+                    <script>
+                      // Set the date we're counting down to
+                      var countDownDate = new Date("mar 1, 2024 15:37:25").getTime();
+                      
+                      // Update the count down every 1 second
+                      var x = setInterval(function() {
+                      
+                        // Get today's date and time
+                        var now = new Date().getTime();
+                          
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+                          
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                          
+                        // Output the result in an element with id="demo"
+                        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+                          
+                        // If the count down is over, write some text 
+                        if (distance < 0) {
+                          clearInterval(x);
+                          document.getElementById("demo").innerHTML = "EXPIRED";
+                        }
+                      }, 1000);
+                      </script>
+                      <script>
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("mar 1, 2024 15:37:25").getTime();
+                        
+                        // Update the count down every 1 second
+                        var x = setInterval(function() {
+                        
+                          // Get today's date and time
+                          var now = new Date().getTime();
+                            
+                          // Find the distance between now and the count down date
+                          var distance = countDownDate - now;
+                            
+                          // Time calculations for days, hours, minutes and seconds
+                          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            
+                          // Output the result in an element with id="demo"
+                          document.getElementById("demo1").innerHTML = days + "d " + hours + "h "
+                          + minutes + "m " + seconds + "s ";
+                            
+                          // If the count down is over, write some text 
+                          if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("demo1").innerHTML = "EXPIRED";
+                          }
+                        }, 1000);
+                        </script>
+                        <script>
+                          // Set the date we're counting down to
+                          var countDownDate = new Date("mar 1, 2024 15:37:25").getTime();
+                          
+                          // Update the count down every 1 second
+                          var x = setInterval(function() {
+                          
+                            // Get today's date and time
+                            var now = new Date().getTime();
+                              
+                            // Find the distance between now and the count down date
+                            var distance = countDownDate - now;
+                              
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                              
+                            // Output the result in an element with id="demo"
+                            document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
+                            + minutes + "m " + seconds + "s ";
+                              
+                            // If the count down is over, write some text 
+                            if (distance < 0) {
+                              clearInterval(x);
+                              document.getElementById("demo2").innerHTML = "EXPIRED";
+                            }
+                          }, 1000);
+                          </script>
+                      
+
+          <!-- cameraAccessories------------------------------------------->
+            <div id="cameraAccessories" class=" mt-1 container-fluid sliDER" >
+              <div class="row " >
+                      <div class="col-sm-8 border " >
+                                  <div class=" text-center slider-caRD ">
+                                      <div class="row mt-2">
+                                        <div class="col-lg " >
+                                          <div class="card h-100 slider-cards" >
+                                              <img src="accessories1.jpg" class="card-img-top mt-2" alt="...">
+                                              <div class="card-body">
+                                                
+                                                <p><a href="#" style="font-size: 10px; ">Tygot 10 Inches LED Ring Light for Camera, Phone with 7 Feet Long Foldable Lightweight Tripod Kit, Tripod  (Black, Supports Up to 5000 g)  </a></p>
+                                                <p>Rs. 639</p>
+                                                <a href="#" class="btn btn-warning rounded-pill mt-auto" style="font-size:0.8em;" onclick="onAddToCart(1)">Add to Cart</a>
+                                                <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg ">
+                                          <div class="card h-100 slider-cards" >
+                                            <img src="accessories2.jpg" class="card-img-top mt-2" alt="...">
+                                            <div class="card-body">
+                                              
+                                              <p><a href="#" style="font-size: 10px; ">Stookin 6x9 FT Parrot Green LEKERA Backdrop Photo Light Studio Photography Background ( Stand Not Included Reflector </a></p>
+                                              <p>Rs. 284</p>
+                                              <a href="#" class="btn btn-warning rounded-pill mt-auto" style="font-size:0.8em;" onclick="onAddToCart(2)">Add to Cart</a>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                            </div>
+                                          </div>
+                                         </div>
+                                        <div class="col-lg"> 
+                                          <div class="card h-100 slider-cards" >
+                                            <img src="accessories3.jpg" class="card-img-top mt-2" alt="...">
+                                            <div class="card-body">
+                                              
+                                              <p><a href="#" style="font-size: 10px; ">DIGITEK Smartphone Gimbal DSG 005 3 Axis Gimbal for Mobile  (300.0) </a></p>
+                                              <p>Rs. 5499</p>
+                                              <a href="#" class="btn btn-warning rounded-pill mt-auto" style="font-size:0.8em;" onclick="onAddToCart(3)">Add to Cart</a>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div><br>
+                                      <div class="row mb-2">
+                                        <div class="col-lg " >
+                                          <div class="card h-100 slider-cards" >
+                                              <img src="accessories4.jpg" style="height: 300px; width: 220px;" class="card-img-top mt-2 m-auto" alt="...">
+                                              <div class="card-body">
+                                                
+                                                <p><a href="#" style="font-size: 10px; ">DIGITEK DSG 007F Foldable Auto Balancing Gimbal for All Smart Phones 3 Axis Gimbal for Camera, Mobile  (280) </a></p>
+                                                <p>Rs. 5988</p>
+                                                <a href="#" class="btn btn-warning rounded-pill mt-auto" style="font-size:0.8em;" onclick="onAddToCart(4)">Add to Cart</a>
+                                                <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg ">
+                                          <div class="card h-100 slider-cards" >
+                                            <img src="accessories5.jpg"  class="card-img-top mt-2" alt="...">
+                                            <div class="card-body">
+                                              
+                                              <p><a href="#" style="font-size: 10px; ">Viraan R1S Bluetooth Remote Selfie Light 3in1 Selfie Stick Tripod Stand with All Phones Single Gimbal for Mobile, Camera  (400)</a></p>
+                                              <p>Rs. 200</p>
+                                              <a href="#" class="btn btn-warning rounded-pill mt-auto" style="font-size:0.8em;" onclick="onAddToCart(5)">Add to Cart</a>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                            </div>
+                                          </div>
+                                         </div>
+                                        <div class="col-lg"> 
+                                          <div class="card h-100 slider-cards" >
+                                            <img src="accessories7.jpg" class="card-img-top mt-2" alt="...">
+                                            <div class="card-body">
+                                              
+                                              <p><a href="#" style="font-size: 10px; ">Syvo WT-3130 Tripod, Tripod Kit  (Brown/Black, Supports Up to 5000 g) </a></p>
+                                              <p>Rs. 799</p>
+                                              <a href="#" class="btn btn-warning rounded-pill mt-auto" style="font-size:0.8em;" onclick="onAddToCart(6)">Add to Cart</a>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      
+                                      </div>
+      
+      
+      
+                                    </div>
+                      </div>
+      
+                               <div class="col-sm-4 text-center d-flex justify-content-center" >
+                                <div class="card slider-cards">
+                                  <img src="accessories8.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    <h5 class="btn btn-danger ">deal of the day</h5>
+                                    <p class="card-text">PICPRO 350w LED Porta Light Kit with Green Screen for Videoshoot, Photography, YouTube Reflector</p>
+                                    <p>Rs. 6940</p>
+                                    <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(7)">Add to cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                               </div>
+              </div>
+           </div>   
+
+           <!--cameras-->
+           <div class=" mt-1 container-fluid sliDER" id="cameras">
+            <div class="row " >
+                    <div class="col-sm-8 border " >
+                                <div class=" text-center slider-caRD ">
+                                    <div class="row mt-2">
+                                      <div class="col-lg " >
+                                        <div class="card h-100 slider-cards" >
+                                            <img src="camera2.jpg" class="card-img-top mt-2" alt="...">
+                                            <div class="card-body">
+                                              
+                                              <p><a href="#" style="font-size: 10px; ">Camera C430W 4k with Waterproof cover </a></p>
+                                              <p>Rs. 1050</p>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(8)">Add to Cart</a>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg ">
+                                        <div class="card h-100 slider-cards" >
+                                          <img src="camera3.jpg" class="card-img-top mt-2" alt="...">
+                                          <div class="card-body">
+                                            
+                                            <p><a href="#" style="font-size: 10px; ">Camera C430W 4k Waterproof</a></p>
+                                            <p>Rs. 2500</p>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(9)">Add to Cart</a>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                          </div>
+                                        </div>
+                                       </div>
+                                      <div class="col-lg"> 
+                                        <div class="card h-100 slider-cards" >
+                                          <img src="camera4.jpg" class="card-img-top mt-2" alt="...">
+                                          <div class="card-body">
+                                            
+                                            <p><a href="#" style="font-size: 10px; ">White NX Mini F1 SMART NX </a></p>
+                                            <p>Rs. 1049</p>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(10)">Add to Cart</a>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div><br>
+                                    <div class="row mb-2">
+                                      <div class="col-lg " >
+                                        <div class="card h-100 slider-cards" >
+                                            <img src="camera5.jpg" class="card-img-top mt-2" alt="...">
+                                            <div class="card-body">
+                                              
+                                              <p><a href="#" style="font-size: 10px; ">GoPro HERO9 Action Camera with 20MP Video Streaming (Dual display, Waterproof upto 33ft)</a></p>
+                                              <p>Rs. 25000</p>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(11)">Add to Cart</a>
+                                              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg ">
+                                        <div class="card h-100 slider-cards" >
+                                          <img src="camera6.jpg" class="card-img-top mt-5 mb-5 m-auto" style="width:250px;" alt="...">
+                                          <div class="card-body">
+                                            
+                                            <p><a href="#" style="font-size: 10px; ">JVC GY GY-HM150U Compact Handheld 3-CCD Camcorder Camcorder  (Black) </a></p>
+                                            <p>Rs. 98000</p>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(12)">Add to Cart</a>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                          </div>
+                                        </div>
+                                       </div>
+                                      <div class="col-lg"> 
+                                        <div class="card h-100 slider-cards" >
+                                          <img style="height: 250px; width: 100px;" src="camera7.jpg" class="card-img-top m-auto mt-5 mb-3" alt="...">
+                                          <div class="card-body">
+                                            
+                                            <p><a href="#" style="font-size: 10px; ">Insta360 One X2 Sports and Action Camera  (Black, 0)</a></p>
+                                            <p>Rs. 10500</p>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(13)">Add to Cart</a>
+                                            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                    </div>
+    
+    
+    
+                                  </div>
+                    </div>
+    
+                             <div class="col-sm-4 text-center d-flex justify-content-center" >
+                              <div class="card slider-cards">
+                                <img src="cameraImg1.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  <h5 class="btn btn-danger ">deal of the day</h5>
+                                  <p class="card-text">PRONOVA Foldable Toy Drone with HQ WiFi Camera Drone</p>
+                                  <p>Rs. 3499</p>
+                                  <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(14)">Add to cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+            </div>
+         </div>
+
+
+         <!-- cardLink1----------------------------------------->
+    <div class="container" id="cardLink1">
+      <div class="row">
+        <div class="col border d-flex justify-content-center" >
+            <img src="card1.jpg" style="height:85vh">
+        </div>
+        <div class="col mt-3" >
+                  <p class="h5">Tablet Chromebook X360,Intel Celeron N4120,14-Inch (35.6 Cm),Hd,4Gb Lpddr4,64Gb Emmc,Intel Uhd Graphics,Thin&Light,Dual Speakers,Brightview Display (Chrome 64,White,1.49 Kg),Ca0505Tu,Chrome OS</p>
+                  <hr>
+                  <p class="h2" style="color: green;">13000.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+                 <small style="text-decoration: line-through;">M.R.P 15000.00</small>
+                 <p>inclusive of all taxes</p>
+                    <div  class=" container row d-flex justify-content-around border"> 
+                                <div class=" col">
+                                    <img src="replace.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                                </div>
+                                <div class=" col">
+                                    <img src="free delivery.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                                </div>
+                                <div class=" col">
+                                    <img src="waranty.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                                </div>
+                                <div class="col">
+                                    <img src="pay on delivery.png" style="height: 35px;"><br>
+                                   <small><a  href="" class="CARD-OFFERS">cash on delivery</a></small>
+                                </div>
+                    </div>
+                    <div class="mt-3 mb-5">
+                        
+                        <button  class="btn btn-warning" onclick="onAddToCart(71)">Add to Cart</button>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                    </div>
+                    
+        </div>
+
+     </div>
+    </div>
+
+    <!--cardLink2-------------->
+    <div class="container" id="cardLink2">
+      <div class="row">
+        <div class="col border d-flex justify-content-center" >
+            <img src="card2.jpg" style="height:80vh">
+        </div>
+        <div class="col mt-3 " >
+                  <p class="h5">EXMOOR® 4K Waterproof Vlog Camera with Wide Angle Lens Underwater WiFi Video Action Camera</p>
+                  <hr>
+                  <p class="h2" style="color: green;">20999.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+                 <small style="text-decoration: line-through;">M.R.P 30500.00</small>
+                 <p>inclusive of all taxes</p>
+                    <div  class=" container row d-flex justify-content-around border"> 
+                                <div class=" col">
+                                    <img src="replace.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                                </div>
+                                <div class=" col">
+                                    <img src="free delivery.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                                </div>
+                                <div class=" col">
+                                    <img src="waranty.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                                </div>
+                                <div class="col">
+                                    <img src="pay on delivery.png" style="height: 35px;"><br>
+                                   <small><a href="" class="CARD-OFFERS">cash on delivery</a></small>
+                                </div>
+                    </div>
+                    <div class="mt-4 mb-5">
+                        <a  class="btn btn-warning" onclick="onAddToCart(72)">Add to Cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                    </div>
+                    
+        </div>
+
+     </div>
+    </div>
+
+    <!-- cardLink3--------------->
+    <div class="container" id="cardLink3">
+      <div class="row">
+        <div class="col border d-flex justify-content-center" >
+            <img src="card3.jpg" style="height:80vh">
+        </div>
+        <div class="col mt-3 " >
+                  <p class="h5">Fare-Boltt Ninja Call Pro Plus 1.83" Smart Watch with Bluetooth Calling, AI Voice Assistance, 100 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution</p>
+                  <hr>
+                  <p class="h2" style="color: green;">7029.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+                 <small style="text-decoration: line-through;">M.R.P 8000.00</small>
+                 <p>inclusive of all taxes</p>
+                 <div  class=" container row d-flex justify-content-around border"> 
+                    <div class=" col">
+                        <img src="replace.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                    </div>
+                    <div class=" col">
+                        <img src="free delivery.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                    </div>
+                    <div class=" col">
+                        <img src="waranty.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                    </div>
+                    <div class="col">
+                        <img src="pay on delivery.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">cash on delivery</a></small>
+                    </div>
+        </div>
+        <div class="mt-4 mb-5">
+            <a  class="btn btn-warning" onclick="onAddToCart(73)">Add to Cart</a>
+            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+        
+</div>
+
+</div>
+</div>
+
+<!--cardLink4----------------------->
+<div class="container" id="cardLink4">
+      <div class="row">
+        <div class="col border d-flex justify-content-center" >
+            <img src="card4.jpg" style="height:80vh">
+        </div>
+        <div class="col mt-3 " >
+                  <p class="h5">Portable WiFi and Bluetooth Smart Speaker with Amazon Alexa by FABRIQ: Wireless Connectivity with Stereo Pairing for Multi-Room Home Audio (Arrows)</p>
+                  <hr>
+                  <p class="h2" style="color: green;">20999.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+                 <small style="text-decoration: line-through;">M.R.P 30100.00</small>
+                 <p>inclusive of all taxes</p>
+                 <div  class=" container row d-flex justify-content-around border"> 
+                    <div class=" col">
+                        <img src="replace.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                    </div>
+                    <div class=" col">
+                        <img src="free delivery.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                    </div>
+                    <div class=" col">
+                        <img src="waranty.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                    </div>
+                    <div class="col">
+                        <img src="pay on delivery.png" style="height: 35px;"><br>
+                       <small><a href="" class="CARD-OFFERS">cash on delivery</a></small>
+                    </div>
+        </div>
+        <div class="mt-4 mb-5">
+            <a  class="btn btn-warning" onclick="onAddToCart(74)">Add to Cart</a>
+            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+        
+</div>
+
+</div>
+</div>
+
+<!--cardLink5-->
+<div class="container" id="cardLink5">
+  <div class="row">
+    <div class="col border d-flex justify-content-center" >
+        <img src="card5.jpg" style="height:80vh">
+    </div>
+    <div class="col mt-3 " >
+              <p class="h5"> Sony HDRCX405 9.2MP HD Handycam Camcorder with Free Carrying Case, Optical( white)</p>
+              <hr>
+              <p class="h2" style="color: green;">5090.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+             <small style="text-decoration: line-through;">M.R.P 7049.00</small>
+             <p>inclusive of all taxes</p>
+             <div  class=" container row d-flex justify-content-around border"> 
+                <div class=" col">
+                    <img src="replace.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                </div>
+                <div class=" col">
+                    <img src="free delivery.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                </div>
+                <div class=" col">
+                    <img src="waranty.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                </div>
+                <div class="col">
+                    <img src="pay on delivery.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">cash on delivery</a></small>
+                </div>
+    </div>
+    <div class="mt-4 mb-5">
+        <a  class="btn btn-warning" onclick="onAddToCart(75)">Add to Cart</a>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+    </div>
+    
+</div>
+
+</div>
+</div>
+
+
+<!--cardLink6-->
+<div class="container" id="cardLink6">
+  <div class="row">
+    <div class="col border d-flex justify-content-center" >
+        <img src="card6.jpg" style="height:80vh">
+    </div>
+    <div class="col mt-3 " >
+              <p class="h5">Singer Aerocool Pride DX 70L Desert Air Cooler with Honey Comb Cooling Pad</p>
+              <hr>
+              <p class="h2" style="color: green;">10050.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+             <small style="text-decoration: line-through;">M.R.P 10099.00</small>
+             <p>inclusive of all taxes</p>
+             <div  class=" container row d-flex justify-content-around border"> 
+                <div class=" col">
+                    <img src="replace.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                </div>
+                <div class=" col">
+                    <img src="free delivery.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                </div>
+                <div class=" col">
+                    <img src="waranty.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                </div>
+                <div class="col">
+                    <img src="pay on delivery.png" style="height: 35px;"><br>
+                   <small><a  href="" class="CARD-OFFERS">cash on delivery</a></small>
+                </div>
+    </div>
+    <div class="mt-3 mb-5">
+        <a  class="btn btn-warning" onclick="onAddToCart(76)">Add to Cart</a>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+    </div>
+    
+</div>
+
+</div>
+</div>
+
+<!--cardLink7----------------------------------->
+<div class="container" id="cardLink7">
+  <div class="row">
+    <div class="col border d-flex justify-content-center" >
+        <img src="card7.jpg" style="height:80vh">
+    </div>
+    <div class="col mt-3 " >
+              <p class="h5">rts  Mini USB Type C Adapter Plug, Type C Female to USB A Male Charger Charging Cable Converter compatible for iPhone, Samsung S20 ultra/S21/S10/S8/S9/MacBook Pro iPad Silver</p>
+              <hr>
+              <p class="h2" style="color: green;">9060.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+             <small style="text-decoration: line-through;">M.R.P 10309.00</small>
+             <p>inclusive of all taxes</p>
+                <div  class=" container row d-flex justify-content-around border"> 
+                            <div class=" col">
+                                <img src="replace.png" style="height: 35px;"><br>
+                               <small><a style="color:blue;text-decoration: none;font-size:0.7em ;">7 days   replacement</a></small>
+                            </div>
+                            <div class=" col">
+                                <img src="free delivery.png" style="height: 35px;"><br>
+                               <small><a style="color:blue;text-decoration: none;font-size:0.7em ;">Free Delivery</a></small>
+                            </div>
+                            <div class=" col">
+                                <img src="waranty.png" style="height: 35px;"><br>
+                               <small><a style="color:blue;text-decoration: none;font-size:0.7em ;">1 year waranty</a></small>
+                            </div>
+                            <div class="col">
+                                <img src="pay on delivery.png" style="height: 35px;"><br>
+                               <small><a style="color:blue;text-decoration: none;font-size:0.7em ;">cash on delivery</a></small>
+                            </div>
+                </div>
+                <div class="mt-4 mb-5">
+                    <a  class="btn btn-warning" onclick="onAddToCart(77)">Add to Cart</a>
+                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                </div>
+                
+    </div>
+
+ </div>
+</div>
+
+<!--caesLink8-->
+<div class="container" id="cardLink8">
+  <div class="row">
+    <div class="col border d-flex justify-content-center" >
+        <img src="card_8.jpg" style="height:80vh">
+    </div>
+    <div class="col mt-3 " >
+              <p class="h5">New World Old Arcade Classic Retro Game Console, 8 BIt TV AV Output Interface Game Console, plug & play wireless video game for kids for 2 Players Built in 620 Games</p>
+              <hr>
+              <p class="h2" style="color: green;">7890.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+             <small style="text-decoration: line-through;">M.R.P 8790.00</small>
+             <p>inclusive of all taxes</p>
+             <div  class=" container row d-flex justify-content-around border"> 
+                <div class=" col">
+                    <img src="replace.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                </div>
+                <div class=" col">
+                    <img src="free delivery.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                </div>
+                <div class=" col">
+                    <img src="waranty.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                </div>
+                <div class="col">
+                    <img src="pay on delivery.png" style="height: 35px;"><br>
+                   <small><a  href="" class="CARD-OFFERS">cash on delivery</a></small>
+                </div>
+    </div>
+    <div class="mt-3 mb-5">
+        <a  class="btn btn-warning" onclick="onAddToCart(78)">Add to Cart</a>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+    </div>
+    
+</div>
+
+</div>
+</div>
+
+<!--cardlink9------------------------------------->
+<div class="container" id="cardLink9">
+  <div class="row">
+    <div class="col border d-flex justify-content-center" >
+        <img src="card9.jpg" style="height:80vh">
+    </div>
+    <div class="col mt-3 " >
+              <p class="h5">Asus G15 5520 Gaming Laptop, Intel i5-12500H/16GB DDR5/1TB SSD/15.6" (39.62cm) FHD WVA AG 120Hz 250 nits/NVIDIA RTX 3050, 4 GB GDDR6/Win 11 + MSO'21/15 Months McAfee/Backlit KB/Dark Shadow Grey/2.81kg</p>
+              <hr>
+              <p class="h2" style="color: green;">13000.00<small style="color: red;font-size: 0.7em;">-15%OFF</small></p>
+             <small style="text-decoration: line-through;">M.R.P 14490.00</small>
+             <p>inclusive of all taxes</p>
+             <div  class=" container row d-flex justify-content-around border"> 
+                <div class=" col">
+                    <img src="replace.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">7 days   replacement</a></small>
+                </div>
+                <div class=" col">
+                    <img src="free delivery.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">Free Delivery</a></small>
+                </div>
+                <div class=" col">
+                    <img src="waranty.png" style="height: 35px;"><br>
+                   <small><a href="" class="CARD-OFFERS">1 year waranty</a></small>
+                </div>
+                <div class="col">
+                    <img src="pay on delivery.png" style="height: 35px;"><br>
+                   <small><a  href="" class="CARD-OFFERS">cash on delivery</a></small>
+                </div>
+    </div>
+    <div class="mt-3 mb-5">
+        <a  class="btn btn-warning" onclick="onAddToCart(79)">Add to Cart</a>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+    </div>
+    
+</div>
+
+</div>
+</div>
+
+
+<!--Games--------------------->
+<div class="container-fluid mt-1 sliDER" id="games">
+  <div class="row"  >
+          <div class="col-sm-8 border w-100">
+                      <div class="container text-center  ">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="gameconsole.jpg" style="height: 300px;" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">Sony PS5 PlayStation Console</a></p>
+                                    <p>Rs. 54990</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(22)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="game2.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Sony PS4 Pro 1TB Console (Black)</a></p>
+                                  <p>Rs. 39990</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(23)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                             <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="game3.jpg" class="card-img-top mt-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Nintendo Switch OLED model With Neon Red & Neon Blue Joy-Con</a></p>
+                                  <p>Rs. 33900</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(24)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div> 
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="game4.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Xbox Series X</a></p>
+                                  <p>Rs. 45990</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(25)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="game5.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">HTC Vive Cosmos Elite Virtual Reality System [video game] </a></p>
+                                    <p>Rs. 106967</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(26)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="game6.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Sony God Of War Ragnarok | Standard Edition | PS5 Game (PlayStation 5)
+                                      PEGI Rating: Ages 18 and Over</a></p>
+                                      <p>Rs 2999</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(27)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="game7.jpg" style="height: 350px;" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">PS5 Spiderman 2 Standard Edn</a></p>
+                                  <p>Rs. 4299</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(28)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div> 
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="game8.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">WB Games Mortal Kombat 11 (PS4)</a></p>
+                                  <p>Rs. 1640</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(29)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div> 
+                          </div>
+                        </div>
+          </div>
+  </div>
+</div>
+
+<!--harddrives-->
+<div class="container-fluid mt-1 sliDER" id="harddrives">
+  <div class="row "  >
+          <div class="col-sm-8 border ">
+                      <div class="container text-center slider-caRD ">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="harddrive1.jpg" style="height: 300px; width: 200px;" class="card-img-top mt-2 m-auto" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; "> Seagate Expansion for Windows and Mac with 3 years Data Recovery Services – Portable 1 TB External Hard Disk Drive (HDD)  (Black)</a></p>
+                                    <p>Rs 4998</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(30)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="harddrive2.jpg" style="height: 300px;width: 250px;" class="card-img-top mt-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Seagate One Touch with Password Protection for Windows & Mac with 3 years Data Recovery Services - Portable 2 TB External Hard Disk Drive (HDD)  (Light Blue) </a></p>
+                                  <p>7199</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(31)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="harddrive3.jpg" style="height: 300px;width: 250px;" class="card-img-top mt-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">WD Elements 2 TB Wired External Hard Disk Drive (HDD)  (Black )  </a></p>
+                                  <p>Rs. 6899</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(32)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="harddrive4.jpg" style="height: 300px;width: 250px;" class="card-img-top mt-2 m-auto/*" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">WD My Passport 2 TB External Hard Disk Drive (HDD)  (Black ) </a></p>
+                                    <p>Rs. 7199</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(33)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="harddrive5.jpg" style="height: 300px;width: 250px;" class="card-img-top mt-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">WD My Book 4 TB External Hard Disk Drive (HDD)  (Black)</a></p>
+                                  <p>Rs. 11495</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(34)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="harddrive7.jpg" style="height: 300px;width: 250px;" class="card-img-top mt-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; "> Seagate One Touch with Password Protection for Windows & Mac with 3 years Data Recovery Services - Portable 1 TB External Hard Disk Drive (HDD)  (Red)  </a></p>
+                                  <p>Rs. 5499</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(35)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          </div>
+
+
+
+                        </div>
+          </div>
+
+                   <div class="col-sm-4 text-center d-flex justify-content-center">
+                    <div class="card slider-cards" style="width: 17rem;">
+                      <img src="harddrive8.jpg" class="card-img-top mt-2" alt="...">
+                      <div class="card-body">
+                        <h5 class="btn btn-danger ">deal of the day</h5>
+                        <p class="card-text">ADATA 1 TB External Hard Disk Drive (HDD)  (Red) </p>
+                        <p>Rs. 4825</p>
+                        <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(36)">Add to cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                      </div>
+                    </div>
+                   </div>
+  </div>
+</div>
+
+<!--watches---------------------------------------------->
+<div class=" mt-1 container-fluid sliDER" id="watches">
+  <div class="row " >
+          <div class="col-sm-8 border " >
+                      <div class=" text-center slider-caRD ">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="slider1image1.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">beatXP Marv Neo 1.85” (4.6 cm) Display, , t Watch,</a></p>
+                                    <p>Rs. 2500</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(80)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider1imag2.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Fire-Boltt Phoenix with a round dial, high-resolution display, Bluetooth calling, health & fitness assistance, water resistance, and a lot more! </a></p>
+                                  <p>Rs. 2999</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(81)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider1image3.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Noise Twist Round dial Smart Watch with Bluetooth Calling, 1.38" TFT Display, up-to 7 Days Battery, 100+ Watch Faces, IP68, Heart Rate Monitor, Sleep Tracking (Jet Black)</a></p>
+                                  <p>Rs. 3303</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(82)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div><br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="slidr1image4.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">resh New Arrival Latest Men Watch Watches Men Ghadi Gents - Boys - 5 Ghadi Boy - Boy Analog Watch</a></p>
+                                    <p>Rs. 4599</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(83)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider1image5.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">mi Smart Watch for Men - Smart Watches for Men Women, Bluetooth Smartwatch </a></p>
+                                  <p>Rs. 699</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(84)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider1image6.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">FIRE-BOLTT Talk Alpha Smartwatch with Bluetooth Calling (42mm Display, Pink Strap) </a></p>
+                                  <p>Rs. 1299</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(85)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          </div>
+
+
+
+                        </div>
+          </div>
+
+                   <div class="col-sm-4 text-center d-flex justify-content-center" >
+                    <div class="card slider-cards">
+                      <img src="slider1image7.jpg" class="card-img-top mt-2" alt="...">
+                      <div class="card-body">
+                        <h5 class="btn btn-danger ">deal of the day</h5>
+                        <p class="card-text">FORSINING Analogue Men's Watch(Gold Dial Silver Colored Strap)-S1089-2</p>
+                        <p>Rs. 5000</p>
+                        <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(86)">Add to cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                      </div>
+                    </div>
+        </div>
+  </div>
+</div>
+
+<!--smartphones-->
+<div class="container-fluid mt-1 sliDER" id="smartphones">
+  <div class="row "  >
+          <div class="col-sm-8 border ">
+                      <div class="container text-center slider-caRD ">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="slider2image1.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 128GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor |</a></p>
+                                    <p>Rs. 23999</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(87)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider2image2.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">iQOO Neo 7 5G (Interstellar Black, 8GB RAM, 128GB Storage) | Dimensity 8200, only 4nm Processor  </a></p>
+                                  <p>Rs. 24999</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(88)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider2image3.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Oppo A79 5G (Glowing Green, 8GB RAM, 128GB Storage) | 5000 mAh Battery with 33W SUPERVOOC Charger  </a></p>
+                                  <p>Rs. 19999</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(89)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="slider2image4.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">Redmi Note 12 (Sunrise Gold, 6GB RAM, 64GB Storage)</a></p>
+                                    <p>Rs. 11499</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(90)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider2image5.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Samsung Galaxy M34 5G (Prism Silver,8GB,128GB)|120Hz sAMOLED Display|50MP Triple No Shake Cam|6000 mAh Battery </a></p>
+                                  <p>Rs. 15000</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(91)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="slider2image6.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India's First Dimensity 7050 Processor | </a></p>
+                                  <p>Rs. 29000</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(92)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          </div>
+
+
+
+                        </div>
+          </div>
+
+                   <div class="col-sm-4 text-center d-flex justify-content-center">
+                    <div class="card slider-cards" style="width: 17rem;">
+                      <img src="slider2image7.jpg" class="card-img-top mt-2" alt="...">
+                      <div class="card-body">
+                        <h5 class="btn btn-danger ">deal of the day</h5>
+                        <p class="card-text">iQOO Neo 7 Pro 5G (Dark Storm, 8GB RAM, 128GB Storage) | Snapdragon® 8+ Gen 1 | Independent Gaming Chip |</p>
+                        <p>Rs. 30999</p>
+                        <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(93)">Add to cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                      </div>
+                    </div>
+                   </div>
+  </div>
+</div>
+
+<!--speakers--------------------------------------->
+<div class="container-fluid mt-1" id="speakers">
+  <div class="row d-flex" >
+          <div class="col-sm-8 border ">
+                      <div class="container text-center  slider-caRD">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="slider3image1.jpg" class="card-img-top mt-2 p-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">boAt Stone 1200 14W Bluetooth Speaker with Upto 9 Hours Battery, RGB LEDs, IPX7 and TWS Feature(Black)</a></p>
+                                    <p>Rs. 800</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(15)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100  slider-cards" >
+                                <img src="slider3image2.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">boAt Stone 1450 Portable Wireless Speaker with 40W RMS Signature Sound, RGB LEDs, TWS Feature, Multi-Compatibility Modes, IPX5 Water Resistance, EQ Modes(Black Storm) </a></p>
+                                  <p>Rs. 1000</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(16)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100  slider-cards" >
+                                <img src="slider3image3.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">boAt Aavante Bar 900/908 Bluetooth Soundbar with 30W RMS, 2.0 Channel, Multiple Connectivity, EQ Modes, Sleek Finish, Easy Access Integrated Controls(Premium Black) </a></p>
+                                  <p>Rs. 1600</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(17)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div><br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100  slider-cards" >
+                                  <img src="slider3image4.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">boAt Stone 1200 14W Bluetooth Speaker with Upto 9 Hours Battery, RGB LEDs</a></p>
+                                    <p>Rs. 600</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(18)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100  slider-cards"  >
+                                <img src="slider3image5.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">boAt Aavante Bar 900/908 Bluetooth Soundbar with 30W RMS, 2.0 Channel, Multiple Connectivity, EQ Modes, Sleek Finish, Easy Access Integrated Controls(Premium Black) </a></p>
+                                  <p>Rs. 2000</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(19)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100  slider-cards" >
+                                <img src="slider3image6.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; "> Stone 1200 14W Bluetooth Speaker with Upto 9 Hours play time water resistence </a></p>
+                                  <p>Rs. 2500</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(20)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div><br><br><br>
+                            </div>
+                          
+                          </div>
+
+
+
+                        </div>
+          </div>
+
+                   <div class="col-sm-4 text-center d-flex justify-content-center">
+                    <div class="card  slider-cards" style="width: 20rem;">
+                      <img src="slider3image7.jpg" class="card-img-top  mt-2 p-2" alt="...">
+                      <div class="card-body">
+                        <h5 class="btn btn-danger ">deal of the day</h5>
+                        <p class="card-text">JBL Partybox 110 | Wireless Bluetooth Party Speaker | 160W Monstrous Pro Sound | Dynamic Light Show</p>
+                        <p>Rs. 20500</p>
+                        <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(21)">Add to cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                      </div>
+                    </div>
+                   </div>
+  </div>
+</div>
+
+
+<!--laptops-->
+<div class="container-fluid mt-1 sliDER" id="laptops">
+  <div class="row "  >
+          <div class="col-sm-8 border ">
+                      <div class="container text-center slider-caRD ">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="laptop1.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">MSI Katana 17 Intel Core i7 12th Gen 12650H - (16 GB/1 TB SSD/Windows 11 Home/8 GB Graphics/NVIDIA GeForce RTX 4060/240 Hz) Katana 17 B12VFK-673IN Gaming Laptops  (17.3 Inch, Black, 2.6 Kg</a></p>
+                                    <p>Rs. 129200</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(37)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="laptop3.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">DELL Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) New Inspiron 15 Laptop Thin and Light Laptops  (38 cm, Carbon Black, 1.65 Kg, With MS Office)</a></p>
+                                  <p>Rs.36550 </p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(38)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="laptop4.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Acer Extensa Intel Core i3 N305 - (8 GB/512 GB SSD/Windows 11 Home) EX215-33 Notebook  (15.6 Inch, Pure Silver, 1.7 Kg)laptops l  </a></p>
+                                  <p>Rs. 29550</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(39)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="laptop5.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">MSI Katana 15 Intel Core i5 12th Gen 12450H - (16 GB/512 GB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 3050/144 Hz) Katana 15 B12UDXK-1005IN Gaming Laptops  (15.6 Inch, Black, 2.25 Kg) </a></p>
+                                    <p>Rs. 50000</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;"onclick="onAddToCart(40)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="laptop6.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">CHUWI Intel Core i3 10th Gen 1005G1 - (8 GB/512 GB SSD/Windows 11 Home) CoreBook X Grey Laptops  (14 inch, Grey, 1.40 kg)</a></p>
+                                  <p>Rs. 25220</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(41)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="laptop7.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Lenovo Intel Core i7 12th Gen 1255U - (16 GB/512 GB SSD/Windows 11 Home) V15 G3 IAP Thin and Light Laptops  (15.6 Inch, Iron Grey, 1.7 Kg) </a></p>
+                                  <p>Rs. 49990</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(42)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          </div>
+                        </div>
+          </div>
+
+                   <div class="col-sm-4 text-center d-flex justify-content-center">
+                    <div class="card slider-cards" style="width: 17rem;">
+                      <img src="laptop2.jpg" class="card-img-top mt-2" alt="...">
+                      <div class="card-body">
+                        <h5 class="btn btn-danger ">deal of the day</h5>
+                        <p class="card-text">HP Intel Intel Core i3 11th Gen 1115G4 - (8 GB/256 GB SSD/Windows 11 Home) 14s - dy2507TU Thin and Light Laptop  (14 inch, Natural Silver, 1.41 Kg, With MS Office) </p>
+                        <p>Rs. 31000</p>
+                        <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(43)">Add to cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                      </div>
+                    </div>
+                   </div>
+  </div>
+</div>
+
+<!--lens-->
+
+<div class="container-fluid mt-1" id="lens">
+  <div class="row d-flex" >
+          <div class="col-sm-8 border ">
+                      <div class="container text-center  slider-caRD">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-90 slider-cards" >
+                                  <img src="lens1.jpg" class="card-img-top mt-2 p-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">Canon EF 50 mm f/1.8 STM Standard Prime Lens  (Black, 50 mm)</a></p>
+                                    <p>Rs. 9999</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(44)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-90  slider-cards" >
+                                <img src="lens2.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">SONY SEL50F18F Standard Prime Lens  (Black, 50 mm)</a></p>
+                                  <p>Rs. 19129</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(45)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-90  slider-cards" >
+                                <img src="lens3.jpg" class="card-img-top mt-2  p-2 " style="height: 280px;" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">NIKON Nikkor Z 50mm f/1.8 S Standard Zoom Lens  (Black, 10 - 50 mm)  </a></p>
+                                  <p>Rs. 37990</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(46)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div><br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-90  slider-cards" >
+                                  <img src="lens4.jpg" class="card-img-top mt-2  p-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">SONY SEL200600G Telephoto Zoom Lens  (White, 200 - 600 mm) </a></p>
+                                    <p>Rs. 1,49,000</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(47)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-90  slider-cards"  >
+                                <img src="lens7.jpg" style="height: 300px; width: 250px;" class="card-img-top mt-2  p-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">SONY SEL16F28 Wide-angle Prime Lens  (Silver, 50 mm) </a></p>
+                                  <p>Rs. 9559</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(48)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-90  slider-cards" >
+                                <img src="lens6.jpg" style="height: 300px; width: 250px;"  class="card-img-top mt-2  p-2 m-auto" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">NIKON AF-S DX Micro NIKKOR 40mm f/2.8G Macro Prime Lens  (Black)</a></p>
+                                  <p>Rs. 17490</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(49)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div><br><br><br>
+                            </div>
+                          
+                          </div>
+                        </div>
+          </div>
+          <div class="col-sm-4 text-center d-flex justify-content-center">
+            <div class="card  slider-cards" style="width: 20rem;">
+              <img src="lens5.jpg" class="card-img-top  mt-2 p-2" alt="...">
+              <div class="card-body">
+                <h5 class="btn btn-danger ">deal of the day</h5>
+                <p class="card-text">Canon RF 24 - 105 mm F4 L IS USM Wide-angle Zoom Lens  (Black, 24 - 105 mm) </p>
+                <p>Rs. 1,00,000</p>
+                <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(50)">Add to cart</a>
+                <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+              </div>
+            </div>
+           </div>
+  </div>
+</div>
+
+<!--pendrives-->
+
+<div class="container-fluid mt-1 sliDER" id="pendrives">
+  <div class="row "  >
+          <div class="col-sm-8 border ">
+                      <div class="container text-center slider-caRD ">
+                          <div class="row mt-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="pendrive1.jpg" style="height: 300px; width: 200px;" class="card-img-top mt-2 m-auto" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">HP X796W 128 Pen Drive  (Multicolor)</a></p>
+                                    <p>Rs. 769</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(51)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="pendrive3.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">SanDisk SDDDC3-064G-I35NB 64 GB OTG Drive  (Blue, Type A to Type C)</a></p>
+                                  <p>Rs. 699</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(52)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="pendrive4.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">SanDisk SDCZ48-064G-I35 64 GB Pen Drive  (Black)  </a></p>
+                                  <p>Rs. 1200</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(53)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row mb-2">
+                            <div class="col-lg " >
+                              <div class="card h-100 slider-cards" >
+                                  <img src="pendrive5.jpg" class="card-img-top mt-2" alt="...">
+                                  <div class="card-body">
+                                    
+                                    <p><a href="#" style="font-size: 10px; ">Acer UF300 64 GB Pen Drive  (Silver) </a></p>
+                                    <p>Rs. 599</p>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(54)">Add to Cart</a>
+                                    <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg ">
+                              <div class="card h-100 slider-cards" >
+                                <img src="pendrive6.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">SanDisk Ultra Shift™ USB 3.0 256 GB Pen Drive  (Black) </a></p>
+                                  <p>Rs. 1789</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(55)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                             </div>
+                            <div class="col-lg"> 
+                              <div class="card h-100 slider-cards" >
+                                <img src="pendrive7.jpg" class="card-img-top mt-2" alt="...">
+                                <div class="card-body">
+                                  
+                                  <p><a href="#" style="font-size: 10px; ">Tobo Chinese Ruyi Style 8GB USB Flash Drives Original Metal USB Disk External Storage U Stick Pendrive. 8 GB Pen Drive  (Gold) </a></p>
+                                  <p>Rs. 749</p>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(56)">Add to Cart</a>
+                                  <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          </div>
+
+
+
+                        </div>
+          </div>
+
+                   <div class="col-sm-4 text-center d-flex justify-content-center">
+                    <div class="card slider-cards" style="width: 17rem;">
+                      <img src="pendrive2.jpg" class="card-img-top mt-2" alt="...">
+                      <div class="card-body">
+                        <h5 class="btn btn-danger ">deal of the day</h5>
+                        <p class="card-text">HP v220w 128 GB Pen Drive  (Silver)</p>
+                        <p>Rs. 757</p>
+                        <a href="#" class="btn btn-warning rounded-pill" onclick="onAddToCart(57)">Add to cart</a>
+                        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+                      </div>
+                    </div>
+                   </div>
+  </div>
+</div>
+
+<!--tablet-------------------------------------->
+<div class=" container-fluid mt-5" id="tablet">
+  <div class="row " >
+    <div class="col-sm-4  d-flex justify-content-center " >
+        <a><img src="tablet1.jpg" style=" width:200px;" class="img-ADJUST "></a>
+    </div>
+    <div class="col-sm-8 mt-2" >
+              <p class="TV-text">MOTOROLA Tab G62 4 GB RAM 128 GB ROM 10.61 inch with Wi-Fi+4G Tablet (Frost Blue)</p>
+               <ul class="list-unstyled list-inline">
+                <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>14,499</li>
+                <li class="list-inline-item"><small>M.R.P:<del class="text-danger">35,599</del>(62%Off)</small></li>
+              </ul>
+              <p class="foNT">save Extra with No Cost EMI</p>
+              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(58)">Add to Cart</a>
+              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+            </div>
+
+ </div>
+
+<hr class="text-danger">
+<div class="row " >
+  <div class="col-sm-4  d-flex justify-content-center " >
+      <img src="tablet2.jpg" style=" width:200px;"/>
+  </div>
+  <div class="col-sm-8 mt-2 " >
+            <p class="TV-text">Xiaomi Pad 6 6 GB RAM 128 GB ROM 11.0 inch with Wi-Fi Only Tablet (Gray) </p>
+             <ul class="list-unstyled list-inline">
+              <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>26,999</li>
+              <li class="list-inline-item"><small>M.R.P:<del class="text-danger">37,000</del>(65%Off)</small></li>
+            </ul>
+            <p class="foNT">service:  brand installation</p>
+            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(59)">Add to Cart</a>
+            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+          </div>
+    
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="tablet3.jpg" style=" width:200px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">REDMI Pad 6 GB RAM 128 GB ROM 10.61 Inch with Wi-Fi Only Tablet (Mint Green)</p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>16,990</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">24,000</del>(62%Off)</small></li>
+          </ul>
+          <p class="foNT">save Extra with No Cost EMI</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(60)">Add to Cart</a>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+
+
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+  <img src="tablet4.jpg" style=" width:250px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+        <p class="TV-text">Lenovo Tab M10 2nd Gen 3 GB RAM 32 GB ROM 10.1 inch with Wi-Fi+4G Tablet (Iron Grey) </p>
+         <ul class="list-unstyled list-inline">
+          <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>8,499</li>
+          <li class="list-inline-item"><small>M.R.P:<del class="text-danger">15,000</del>(62%Off)</small></li>
+        </ul>
+        <p class="foNT">service:  brand installation</p>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(61)">Add to Cart</a>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+      </div>
+
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="tablet5.jpg" style=" width:200px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">SAMSUNG Galaxy Tab S7 FE With Stylus 6 GB RAM 128 GB ROM 12.4 inches with Wi-Fi+4G Tablet (Black) </p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>37,999</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">48,000</del>(65%Off)</small></li>
+          </ul>
+          <p class="foNT">service:  brand installation</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(62)">Add to Cart</a>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="tablet6.jpg" style=" width:200px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">realme Pad X 6 GB RAM 128 GB ROM 11 inch with Wi-Fi+5G Tablet (Glowing Grey) </p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>24,999</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">35,000</del>(65%Off)</small></li>
+          </ul>
+          <p class="foNT">service:  brand installation</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(63)">Add to Cart</a>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="tablet7.jpg" style=" width:200px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">SAMSUNG Galaxy Tab A8 4 GB RAM 64 GB ROM 10.5 inch with Wi-Fi+4G Tablet (Gray)</p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>15,999</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">28,000</del>(65%Off)</small></li>
+          </ul>
+          <p class="foNT">service:  brand installation</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(64)">Add to Cart</a>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="tablet8.jpg" style=" width:150px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">Xiaomi Pad 6 6 GB RAM 128 GB ROM 11.0 inch with Wi-Fi Only Tablet (Gray) </p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>24,999</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">36,000</del>(65%Off)</small></li>
+          </ul>
+          <p class="foNT">service:  brand installation</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(65)">Add to Cart</a>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="tablet9.jpg" style=" width:200px;"/>
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">OnePlus Pad 12 GB RAM 256 GB ROM 11.61 inch with Wi-Fi Only Tablet (Halo Green)</p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>26,999</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">37,000</del>(65%Off)</small></li>
+          </ul>
+          <p class="foNT">service:  brand installation</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(66)">Add to Cart</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+
+</div>
+
+<!--television-->
+<div class="container-fluid" id="television">
+  <div class="row " >
+    <div class="col-sm-4  d-flex justify-content-center " >
+        <a><img src="TVimage1.jpg" style=" width:18em;" class="img-ADJUST"></a>
+    </div>
+    <div class="col-sm-8 mt-2" >
+              <p class="TV-text">TVW 80 cm (32 inches) Linux Series Frameless HD Ready Smart LED TV VW32C2 (Black) | with 18 Months Warranty</p>
+               <ul class="list-unstyled list-inline">
+                <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>12,990</li>
+                <li class="list-inline-item"><small>M.R.P:<del class="text-danger">34,000</del>(62%Off)</small></li>
+              </ul>
+              <p class="foNT">save Extra with No Cost EMI</p>
+              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(67)">Add to Cart</a>
+              <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+            </div>
+
+ </div>
+
+<hr class="text-danger">
+<div class="row " >
+  <div class="col-sm-4  d-flex justify-content-center " >
+      <img src="Tvimage3.jpg" style=" width:17em;">
+  </div>
+  <div class="col-sm-8 mt-2 " >
+            <p class="TV-text">iFFALCON 80.04 cm (32 inches) Bezel-Less S Series HD Ready Smart Android LED TV (iFF32S53)</p>
+             <ul class="list-unstyled list-inline">
+              <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>29,990</li>
+              <li class="list-inline-item"><small>M.R.P:<del class="text-danger">32,000</del>(65%Off)</small></li>
+            </ul>
+            <p class="foNT">service:  brand installation</p>
+            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(68)">Add to Cart</a>
+            <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+          </div>
+    
+</div>
+<hr class="text-danger">
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+    <img src="Tvimage4.jpg" style=" width: 17em;">
+</div>
+<div class="col-sm-8 mt-2 " >
+          <p class="TV-text">AKAI AKLT-S-FL1Y9M</p>
+           <ul class="list-unstyled list-inline">
+            <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>10,990</li>
+            <li class="list-inline-item"><small>M.R.P:<del class="text-danger">24,000</del>(62%Off)</small></li>
+          </ul>
+          <p class="foNT">save Extra with No Cost EMI</p>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(69)">Add to Cart</a>
+          <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+        </div>
+  
+</div>
+<hr class="text-danger">
+
+
+<div class="row " >
+<div class="col-sm-4  d-flex justify-content-center " >
+  <img src="Tvimage5.jpg" style=" width:17em;">
+</div>
+<div class="col-sm-8 mt-2 " >
+        <p class="TV-text">Xiaomi A Series 80 cm (32 inch) HD Ready Smart TV, ELA5125IN</p>
+         <ul class="list-unstyled list-inline">
+          <li class="h5 list-inline-item"><i class="bi bi-currency-rupee"></i>16,990</li>
+          <li class="list-inline-item"><small>M.R.P:<del class="text-danger">37,000</del>(62%Off)</small></li>
+        </ul>
+        <p class="foNT">service:  brand installation</p>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onAddToCart(70)">Add to Cart</a>
+        <a href="#" class="btn btn-warning rounded-pill " style="font-size:0.8em;" onclick="onBuyNow()">Buy Now</a>
+      </div>
+
+</div>
+<hr class="text-danger">
+
+</div>
+
+<!--aboutUs------------------------------------->
+
+<div id="aboutUs">
+  <div class="container border" style="background: none;">
+    <div class="row mt-3 d-flex justify-content-around">
+        <div class="col-lg" style="display: flex; flex-direction:column; align-items:center;">
+                <div><img src="about-img-1.jpg" class="ADJust mt-3"></div>
+                <div class="text-center mt-3">
+                    <h4>what We Really Do?</h4>
+                    <p>Welcome to Electro! Discover a curated selection of cutting-edge electronics, from gadgets to laptops and mobile phones. Enjoy seamless online shopping, exclusive deals, and expert guidance. With fast delivery and customer-centric support, we're your one-stop destination for all things tech!.</p>
+                </div>
+        </div>
+        <div class="col-lg" style="display: flex; flex-direction:column; align-items:center;">
+            <img src="about-img-2.jpg"  class="ADJust mt-3">
+            <div class="text-center mt-3">
+                <h4>Our Versions</h4>
+                <p>Welcome to Electro, where innovation meets your fingertips! Explore our latest versions, showcasing a diverse range of electronics gadgets, mobile phones, and laptops. With user-friendly interfaces, exclusive deals, and expertly curated selections, Electro is your premier destination for seamless online tech shopping. Upgrade your tech experience with Electro – Your Gateway to Cutting-Edge Electronics!.</p>
+            </div>
+
+        </div>
+        <div class="col-lg" style="display: flex; flex-direction:column; align-items:center;">
+            <img src="about-img-3.jpg"  class="ADJust mt-3">
+            <div class="text-center mt-3">
+                <h4> History Of Beginning</h4>
+                <p>"Electro's Origin Tale: From a tech enthusiast's dream to your go-to digital marketplace. Our humble beginnings paved the way for a vibrant journey in bringing you the latest in gadgets, mobile phones, and laptops. Explore the evolution of Electro – where innovation and accessibility converge."</p>
+            </div>
+
+        </div> 
+
+    </div>
+    
+</div><br>
+<div class="text-center">
+    <div> <h5>support 24/7</h5></div>
+    
+<p class="w-80">24/7 Support at Electro: Elevating Your Tech Experience
+
+  At Electro, we understand that your tech needs don't adhere to a schedule. That's why our dedicated support team is available 24/7 to assist you. Whether you have a question about our electronic gadgets or need guidance with your online purchase, we're here around the clock to ensure your satisfaction. Experience seamless assistance at any hour – because your convenience is our priority at Electro.</p>
+<table  align="center" cellpadding="10px" cellspacing="10px">
+    <tr><td>BEST QUALITY</td></tr>
+    <tr><td>CUSTOMER CARE</td></tr>
+    <tr><td>FASTEST DELIVERY</td></tr>
+    <tr><td>OVER 200 SATISFIED CUSTOMERS</td></tr>
+</table>
+</div> 
+</div>
+
+<!--cart----------------------------->
+<ul id="cartContainer" class="cart-container  m-auto "></ul>
+</div>
+<!--Search Items-->
+<div class=" mt-1 container-fluid sliDER d-flex justify-content-center w-100" id="searchContainer">
+  <div class="row ml-5" id="searchSubcontainer" >
+  </div>
+  <div id="emptySearchContainer" style="height: 60vh;  justify-content:center; align-items:center;">
+    <p>No items found!....</p>
+  </div>
+</div>
+
+<!--Adress----------------------------->
+<div class="border w-50 m-auto mt-5 mb-5 p-5" id="addressContainer" style=" flex-direction:column; align-items:center;">
+<div id="addrssFrom" style="height: 60vh;">
+  <h2 class="text-center" style="margin-bottom: 35px;">Delivery Address</h2>
+  <table>
+    <tr style="margin-bottom: 15px; ">
+      <td><label for="name"> Name* : </label></th>
+      <td><input  type="text" style="margin-left: 10px; margin-bottom: 15px; width: 300px; height:40px;" id="name" placeholder="Enter name"/></th>
+    </tr>
+    <tr style="margin-bottom: 15px;">
+      <td><label for="address"> Address* : </label></td>
+      <td><textarea style="margin-left: 10px; margin-bottom: 15px;" cols="30" rows="3" id="address" placeholder="Enter address"></textarea></td>
+    </tr>
+    <tr style="margin-bottom: 15px;">
+      <td><label for="address"> Mobile Number* : </label></th>
+      <td><input style="margin-left: 10px; margin-bottom: 15px; width: 300px; height:40px;" required maxlength="10" id="number" placeholder="Enter mobile number"></textarea></th>
+    </tr>
+    <tr style="margin-bottom: 15px;">
+      <td><label for="state"> State* : </label></td>
+      <td> <input style="margin-left: 10px; margin-bottom: 15px; width: 300px; height:40px;" style="margin-left: 25px;" id="state" placeholder="Enter state"/></td>
+    </tr>
+    <tr>
+      <td><label for="postalcode"> Postal Code* :  </label></td>
+      <td><input required maxlength="6" style="margin-left: 15px;  width: 300px; height:40px;" id="postalcode" placeholder="Postal code"/></td>
+    </tr>
+  </table>
+</div>
+<button  class="btn btn-primary" onclick="onSubmit()">Submit</button>
+</div>
+
+
+
+
+                     
+                       <!--footer section-->
+                     <div class="container-fluid mt-3">
+                      <nav class="navbar bg-warning img-thumbnail">
+                       
+                      </nav>
+            <div class="footer ">
+              
+                   <div class="  mt-4">
+                     
+                      <div class="row d-flex justify-content-center align-item-center">
+                                   <div class=" col-md-2 ">
+                                             <ul class="list-unstyled">
+                                              <li><strong>Find it fast</strong></li>
+                                              <li><a>Accessories</a></li>
+                                              <li><a>Gaming</a></li>
+                                              <li><a>Laptops</a></li>
+                                              <li><a> MAC Computers</a></li>
+                                              <li><a>PC Computers</a></li>
+                                              <li><a>Ultrabooks</a></li>                                              
+                                             </ul>
+                                   </div>
+                                   <div class="col-md-2 ">
+                                    <ul class="list-unstyled">
+                                     <li><strong>Information</strong></li>
+                                     <li><a>About</a></li>
+                                     <li><a>Contact Us</a></li>
+                                     <li><a>All Collections</a></li>
+                                     <li><a> Privacy Policy</a></li>
+                                     <li><a>Terms and Conditions</a></li>
+                                                                                   
+                                    </ul>
+                          </div>
+                          <div class="col-md-2 ">
+                            <ul class="list-unstyled">
+                             <li><strong>In The Spotlight</strong></li>
+                             <li><a>Electronics</a></li>                   
+                             <li><a>Video Games</a></li>                                     
+                            </ul>
+                       </div>
+                           <div class="col-md-2 ">
+                            <p> <strong>contact info</strong><br>Balanagar, Hyderabad, Telangana, India - 525258</p>
+                            <p><strong>(+91)8765462342<br>040-45858414 <br>electro.customer@gmail.com</strong></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook me-3" viewBox="0 0 16 16">
+                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter me-3" viewBox="0 0 16 16">
+                              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest me-3" viewBox="0 0 16 16">
+                              <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-3" viewBox="0 0 16 16">
+                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                           </div>
+                      </div>
+
+                     </div>
+                             <hr>
+                     
+                        <p style="display:flex ;justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle-fill mt-1" viewBox="0 0 16 16">
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c.961 0 1.641.633 1.729 1.512h1.295v-.088c-.094-1.518-1.348-2.572-3.03-2.572-2.068 0-3.269 1.377-3.269 3.638v1.073c0 2.267 1.178 3.603 3.27 3.603 1.675 0 2.93-1.02 3.029-2.467v-.093H9.875c-.088.832-.75 1.418-1.729 1.418-1.224 0-1.927-.891-1.927-2.461v-1.06c0-1.583.715-2.503 1.927-2.503Z"/>
+                        </svg>2024 Electro 10 Shopify Theme.All Rights Reserved</p>
+                 </div>
+                </div>
+  </div>            
+    </body>
+</html>
