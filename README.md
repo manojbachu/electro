@@ -1,15 +1,15 @@
 <h1>Electro:</h1>
-Transforming Tomorrow with Affordable Tech Solutions Today.
+Transforming Tomorrow with Affordable Tech Solutions Today.Simplifying Lives,Your go-to online destination for hassle-free gadget shopping, eliminating daily purchasing challenges.
 <h1>Project Details</h1>
 1.	Project Demo URL:<br>
 2.	Demo Video URL:<br>
 3.	GitHub Repository URL:<br>
 4.	Industry : E-commerce:<br> 
 <h1> Roles and responsibilities</h1>
-Manoj Bachu (project management)                 :Manages the web development project.<br>
-Vatsavayi T Subrahmanya Varma  (Deployment)      :Deployment and maintenance of  project infrastructure.<br>
-Gaddikoppula Sandeep Naidu (Documentation)       :Responsible for managing the documentation process<br>
-Mohammed Abdul Umair Uddin (content management)  :Responsible for managing the website content<br>
+1.Manoj Bachu (project management)                 :Manages the web development project.<br>
+2.Vatsavayi T Subrahmanya Varma  (Deployment)      :Deployment and maintenance of  project infrastructure.<br>
+3.Gaddikoppula Sandeep Naidu (Documentation)       :Responsible for managing the documentation process.<br>
+4.Mohammed Abdul Umair Uddin (content management)  :Responsible for managing the website content.<br>
 <h1>Azure services used:</h1>
 1.	Azure blob storage<br>
 2.	Storage account<br>
