@@ -6,11 +6,11 @@ Transforming Tomorrow with Affordable Tech Solutions Today.
 3.	**GitHub Repository URL:**<br>
 4.	**Industry : E-commerce:**<br>
 <h1>Azure services used:</h1>
-1.	Azure blob storage
-2.	Storage account
-3.	Azure Backup service
-4.	Azure ai services
-5.	chatbot
+1.	Azure blob storage<br>
+2.	Storage account<br>
+3.	Azure Backup service<br>
+4.	Azure ai services<br>
+5.	chatbot<br>
 
 <h1>Problem Statement:</h1>
 Create an efficient e-commerce solution for "Electro" focusing on user-friendly navigation, inventory management, and showcasing affordable prices and enticing offers on a diverse range of electronic gadgets, including smartwatches, smartphones, laptops, and tablets.
