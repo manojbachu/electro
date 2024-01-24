@@ -506,6 +506,7 @@ function onAddToCart(id) {
     }
 
     updateCartDisplay();
+    alert("Product is added to cart")
 }
 
 function updateCartDisplay() {
@@ -575,16 +576,23 @@ function onBuyNow(){
     let postalCode;
 
     document.addEventListener('DOMContentLoaded', function() {
-        nam = document.getElementById("name").value;
-        console.log(name)
-        address = document.getElementById("address").value;
-        state = document.getElementById("state").value;
-        number = document.getElementById("number").value;
-        postalCode = document.getElementById("postalcode").value;
+        nam = document.getElementById("nam");
+        address = document.getElementById("address");
+        state = document.getElementById("state");
+        number = document.getElementById("number");
+        postalCode = document.getElementById("postalcode");
     });
 
 function onSubmit(){
+    let namValue = nam.value.length !== 0
+    let addressValue = address.value.length !== 0
+    let stateValue = state.value.length !== 0
+    let numberValue = number.value.length !== 0
+    let postalCodeValue = postalCode.value.length !== 0
+     
+    if (namValue && addressValue && stateValue && numberValue && postalCodeValue){
         alert("Your order will deliver soon!")
-    
-    
+    }else{
+        alert("Please fill all details.")
+    }
 }
