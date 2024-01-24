@@ -2,9 +2,9 @@
 Transforming Tomorrow with Affordable Tech Solutions Today.
 <h1>Project Details</h1>
 1.	**Project Demo URL:**<br>
-2.	**Demo Video URL:** 
-3.	**GitHub Repository URL:**
-4.	**Industry : E-commerce:**
+2.	**Demo Video URL:**<br> 
+3.	**GitHub Repository URL:**<br>
+4.	**Industry : E-commerce:**<br>
 <h1>Azure services used:</h1>
 1.	Azure blob storage
 2.	Storage account
