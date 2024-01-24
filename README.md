@@ -1,6 +1,6 @@
 <h1>Electro:</h1>
 Transforming Tomorrow with Affordable Tech Solutions Today.
-Project Details
+<h1>Project Details</h1>
 1.	**Project Demo URL 
 2.	**Demo Video URL 
 3.	GitHub Repository URL :
