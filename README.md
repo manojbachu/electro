@@ -1,10 +1,10 @@
 <h1>Electro:</h1>
 Transforming Tomorrow with Affordable Tech Solutions Today.
 <h1>Project Details</h1>
-<h3>1.	Project Demo URL:<br></h3>
-<h3>2.	Demo Video URL:<br></h3> 
-<h3>3.	GitHub Repository URL:<br></h3>
-<h3>4.	Industry : E-commerce:<br></h3>
+1.	Project Demo URL:<br>
+2.	Demo Video URL:<br>
+3.	GitHub Repository URL:<br>
+4.	Industry : E-commerce:<br>
 <h1>Azure services used:</h1>
 1.	Azure blob storage<br>
 2.	Storage account<br>
