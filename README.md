@@ -3,8 +3,8 @@ Transforming Tomorrow with Affordable Tech Solutions Today.Simplifying Lives,You
 <h1>Project Details</h1>
 1.	Project Demo URL:<br>
 2.	Demo Video URL:<br>
-3.	GitHub Repository URL:<br>
-4.	Industry : E-commerce:<br> 
+3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
+4.	Industry : E-commerce<br> 
 <h1> Roles and responsibilities</h1>
 1.Manoj Bachu (project management)                 :Manages the web development project.<br>
 2.Vatsavayi T Subrahmanya Varma  (Deployment)      :Deployment and maintenance of  project infrastructure.<br>
