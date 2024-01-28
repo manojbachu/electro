@@ -81,14 +81,15 @@ Here I am attaching the final working website's screenshot for the reference.
 <h3>Searched Products</h3> 
 <img src="https://github.com/manojbachu/electro/blob/main/searched%20products.png?raw=true" alt="searched products"/>
 
-<h3>Resource Visualizer</h3> 
-<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
+<h3>No items found</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/no%20items%20found.png?raw=true" alt="no items found"/>
 
-<h3>Resource Visualizer</h3> 
-<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
+<h3>Cart</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/cart.png?raw=true" alt="cart"/>
 
-<h3>Resource Visualizer</h3> 
-<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
+<h3>Delivery address form</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/delivery%20address%20form.png?raw=true" alt="delivery address form"/>
+
 
 
 
