@@ -1,8 +1,8 @@
 <h1>Electro:</h1>
 Transforming Tomorrow with Affordable Tech Solutions Today.Simplifying Lives,Your go-to online destination for hassle-free gadget shopping, eliminating daily purchasing challenges.
 <h1>Project Details</h1>
-1.	Project Demo URL:<br>
-2.	Demo Video URL:<br>
+1.	Project Demo URL: https://electrostorage2.z13.web.core.windows.net/ <br>
+2.	Demo Video URL: https://youtu.be/8ErNjxboKGo<br>
 3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
 4.	Industry : E-commerce<br> 
 <h1> Roles and responsibilities</h1>
@@ -29,22 +29,32 @@ Azure Storage Account:- Azure Storage Account is a foundational component in Mic
 <h1>Azure AI Service</h1>
 Azure Chatbot :- The Azure AI Language Chatbot is a cutting-edge conversational agent powered by Microsoft's Azure platform. Leveraging advanced natural language processing capabilities, it facilitates dynamic and context-aware interactions. This intelligent chatbot employs machine learning algorithms to comprehend user queries, providing personalized responses and assistance across diverse domains. Seamlessly integrating with Azure services, it ensures scalability and reliability.
 <h1>Screenshot’s:</h1>
-**Storage account**
-![storage account]([https://example.com/path_to_your_image.jpg](https://github.com/manojbachu/electro/blob/main/storage%20account.jpg.png?raw=true))
-**Static Website**
-![static website]([https://example.com/path_to_your_image.jpg](https://github.com/manojbachu/electro/blob/main/staticwebsite.jpg.png?raw=true))
-**Container**
-![Container]([https://example.com/path_to_your_image.jpg](https://github.com/manojbachu/electro/blob/main/container.png?raw=true))
-**Storage account**
-![Image description](https://example.com/path_to_your_image.jpg)
-**Storage account**
-![Image description](https://example.com/path_to_your_image.jpg)
-**Storage account**
-![Image description](https://example.com/path_to_your_image.jpg)
-**Storage account**
-![Image description](https://example.com/path_to_your_image.jpg)
-**Storage account**
-![Image description](https://example.com/path_to_your_image.jpg)
+<h3>Storage Account</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/storage%20account.jpg.png?raw=true" alt="Storage account"/>
+
+<h3>Static Website</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/staticwebsite.jpg.png?raw=true" alt="Static website"/>
+
+<h3>Container</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/container.jpg.png?raw=true" alt="Container"/>
+
+<h3>Backup od Blob</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/backup%20od%20blob.png?raw=true" alt="Backup blob"/>
+
+<h3>Backup Policy</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/back%20up%20policy.png?raw=true" alt="Back up policy"/>
+
+<h3>Role Assignment</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/role%20assignment.jpg.png?raw=true" alt="role assignment"/>
+
+<h3>AI Chatbot</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/AI%20Chagbot.png?raw=true" alt="AI Chatbot"/>
+
+<h3>Test in web chat</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/chat%20bot%20text.png?raw=true" alt="chatbot test"/>
+
+<h3>Resource Visualizer</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
 
 <h1>Description</h1>
 Here I am attaching the final working website's screenshot for the reference.
