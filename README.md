@@ -29,6 +29,23 @@ Azure Storage Account:- Azure Storage Account is a foundational component in Mic
 <h1>Azure AI Service</h1>
 Azure Chatbot :- The Azure AI Language Chatbot is a cutting-edge conversational agent powered by Microsoft's Azure platform. Leveraging advanced natural language processing capabilities, it facilitates dynamic and context-aware interactions. This intelligent chatbot employs machine learning algorithms to comprehend user queries, providing personalized responses and assistance across diverse domains. Seamlessly integrating with Azure services, it ensures scalability and reliability.
 <h1>Screenshot’s:</h1>
+**Storage account**
+![storage account]([https://example.com/path_to_your_image.jpg](https://github.com/manojbachu/electro/blob/main/storage%20account.jpg.png?raw=true))
+**Static Website**
+![static website]([https://example.com/path_to_your_image.jpg](https://github.com/manojbachu/electro/blob/main/staticwebsite.jpg.png?raw=true))
+**Container**
+![Container]([https://example.com/path_to_your_image.jpg](https://github.com/manojbachu/electro/blob/main/container.png?raw=true))
+**Storage account**
+![Image description](https://example.com/path_to_your_image.jpg)
+**Storage account**
+![Image description](https://example.com/path_to_your_image.jpg)
+**Storage account**
+![Image description](https://example.com/path_to_your_image.jpg)
+**Storage account**
+![Image description](https://example.com/path_to_your_image.jpg)
+**Storage account**
+![Image description](https://example.com/path_to_your_image.jpg)
+
 <h1>Description</h1>
 Here I am attaching the final working website's screenshot for the reference.
 <h1>Working Live Project Display:</h1>
