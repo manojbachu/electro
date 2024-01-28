@@ -59,6 +59,36 @@ Azure Chatbot :- The Azure AI Language Chatbot is a cutting-edge conversational 
 <h1>Description</h1>
 Here I am attaching the final working website's screenshot for the reference.
 <h1>Working Live Project Display:</h1>
+<h3>Sign In</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/Login%20page.png?raw=true" alt="Login"/>
+
+<h3>Home</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/Home.png?raw=true" alt="Home"/>
+
+<h3>About Us</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/aboutus.png?raw=true" alt="About Us"/>
+
+
+<h3>Special offers</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/special%20offer.png?raw=true" alt="special offers"/>
+
+<h3>Categories</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/categories.png?raw=true" alt="categories"/>
+
+<h3>Products</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/products.png?raw=true" alt="products"/>
+
+<h3>Searched Products</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/searched%20products.png?raw=true" alt="searched products"/>
+
+<h3>Resource Visualizer</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
+
+<h3>Resource Visualizer</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
+
+<h3>Resource Visualizer</h3> 
+<img src="https://github.com/manojbachu/electro/blob/main/resource%20visualizer.png?raw=true" alt="resource visualizer"/>
 
 
 
