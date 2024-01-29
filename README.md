@@ -3,7 +3,7 @@ Transforming Tomorrow with Affordable Tech Solutions Today.Simplifying Lives,You
 <h1>Project Details</h1>
 1.	Project Demo URL: https://electrostorage2.z13.web.core.windows.net/ <br>
 2.	Demo Video URL: https://youtu.be/8ErNjxboKGo<br>
-3.	GitHub Repository URL:  https://github.com/manojbachu/electrogit <br>
+3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
 4.	Industry : E-commerce<br> 
 <h1> Roles and responsibilities</h1>
 1.Manoj Bachu (project management)                 :Manages the web development project.<br>
