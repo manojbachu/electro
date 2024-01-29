@@ -95,4 +95,4 @@ Here I am attaching the final working website's screenshot for the reference.
 
 
 <h1>Final Project Statement:</h1>
-Elevate your digital experience with 'Electronic,' a dynamic platform offers affordable, cutting-edge electronic gadgets curated to empower students and tech enthusiasts alike, bridging the gap between innovation and accessibility.
+Elevate your digital experience with 'Electronic,' a dynamic platform offers affordable, cutting-edge electro gadgets curated to empower students and tech enthusiasts alike, bridging the gap between innovation and accessibility.
