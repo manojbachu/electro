@@ -14,8 +14,9 @@ Transforming Tomorrow with Affordable Tech Solutions Today.Simplifying Lives,You
 1.	Azure blob storage<br>
 2.	Storage account<br>
 3.	Azure Backup service<br>
-4.	Azure ai services<br>
-5.	chatbot
+4.	Azure AI services<br>
+5.	chatbot<br>
+6.Azure Role Based access Control(RBAC)
 
 <h1>Problem Statement:</h1>
 Create an efficient e-commerce solution for "Electro" focusing on user-friendly navigation, inventory management, and showcasing affordable prices and enticing offers on a diverse range of electronic gadgets, including smartwatches, smartphones, laptops, and tablets.
