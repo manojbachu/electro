@@ -1,7 +1,7 @@
 <h1>Electro:</h1>
 Transforming Tomorrow with Affordable Tech Solutions Today.Simplifying Lives,Your go-to online destination for hassle-free gadget shopping, eliminating daily purchasing challenges.
 <h1>Project Details</h1>
-1.	Project Demo URL: https://electrostorage2.z13.web.core.windows.net/ <br>
+1	Project Demo URL: https://electrostorage2.z13.web.core.windows.net/ <br>
 2.	Demo Video URL: https://youtu.be/8ErNjxboKGo<br>
 3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
 4.	Industry : E-commerce<br> 
